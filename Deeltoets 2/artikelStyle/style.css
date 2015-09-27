@@ -1,0 +1,317 @@
+/*
+    Author:         Kelvin van Amstel
+    Studentnr:      500677296
+    Class:          V1_10
+    Teacher:        Jonathan Leenman & Michelle van den Aardweg
+    Created on:     24-09-2015
+    Finished on:    30-09-2015
+    Description:    Stylesheet for artikelpagina.html and formulierpagina.html,
+                    for creating a responsive website.
+*/
+
+
+/**********************/
+/* Universal selector */
+/**********************/
+* {
+    box-sizing: border-box;
+    font-family: "Charter BT W01",Georgia;
+    list-style-type: none;
+    text-decoration: none
+}
+
+/**************/
+/* Typography */
+/**************/
+p {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 140%;
+}
+
+a {
+    color: darkblue;
+}
+
+a:hover {
+    color: black;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+/********/
+/* body */
+/********/
+body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+body > header {
+    display: flex;
+    background-color: #C2E8B5;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    order: 0;
+    padding: 1em 2em 1em 2em;
+    width: 100%;
+}
+
+body > main {
+    background-color: #F0C8BB;
+    order: 1;
+    padding: 1em 4em 1em 4em;
+    width: 80%;
+}
+
+body > section {
+    background-color: #E6C7F0;
+    order: 2;
+    padding: 1em 14em 1em 14em;
+    width: 100%;
+}
+
+body > aside {
+    background-color: #B5EDFF;
+    order: 1;
+    padding: 1.5em 1em 1.5em 4em;
+    text-align: left;
+    width: 20%;
+}
+
+body > footer {
+    background-color: #4F4F4F;
+    color: #FFF;
+    order: 3;
+    padding: 1em 14em 1em 14em;
+    width: 100%;
+}
+
+/**********/
+/* header */
+/**********/
+header > h1, p {
+    order: 2;
+}
+
+header > nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    order: 0;
+}
+
+header > nav > ul > li {
+    display: flex;
+    height: 100%;
+}
+
+header > nav > ul > li > a {
+    border-radius: 50% / 50%;
+    color: black;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+@keyframes jump {
+    to {
+        border-radius: 50%;
+        margin: 0 0 1em 0;
+    }
+}
+
+header > nav > ul > li > a:hover {
+    animation: 0.5s jump infinite alternate;
+    animation-timing-function: cubic-bezier;
+    background-color: white;
+}
+
+header > form {
+    margin-top: 3em;
+}
+
+header > img {
+    height: 80%;
+    order: 1;
+    width: 80%;
+}
+
+/********/
+/* Main */
+/********/
+section > img {
+    width: 100%;
+}
+
+/********************/
+/* .related section */
+/********************/
+section.related > article:nth-child(odd) {
+    background-color: #EDDCF2;
+    padding: 1em 2em 1em 2em;
+    width: 100%;
+}
+
+/*********/
+/* aside */
+/*********/
+aside > section > article > p {
+    font-size: 1em;
+}
+
+/**********/
+/* footer */
+/**********/
+footer > section > p {
+    color: #FFF;
+}
+
+footer > p > a {
+    color: #FFF;
+}
+
+body > footer > section > p > a {
+    color: #FFF;
+}
+
+section > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+section > ul > li {
+    margin: 1em 0;
+}
+
+section > ul > li > a {
+    color: #FFF;
+    font-size: 1.2em;
+    line-height: 180%;
+}
+
+section > ul > li > ul > li > a{
+    color: #FFF;
+}
+
+/*********************************************/
+/* Media queries maximal width size is 480px */
+/*********************************************/
+@media (max-width: 800px) {
+
+    img {
+        width: 100%;
+    }
+
+    /********/
+    /* body */
+    /********/
+    body {
+        display: flex;
+        padding: 1em;
+        text-align: left;
+        width: 100%;
+    }
+
+    body > header {
+        order: 0;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    body > main {
+        order: 1;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    body > section {
+        order: 2;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    body > aside {
+        border: none;
+        margin: 0;
+        order: 3;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    body > footer {
+        order: 4;
+        padding: 0.5em;
+        width: 100%;
+    }
+
+    header > img {
+        width: 100%;
+    }
+
+    /* Main */
+    article > section {
+        margin: 0 1em;
+    }
+
+    /********************/
+    /* .related section */
+    /********************/
+    section > article {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1em 1.5em;
+    }
+
+    article > footer {
+        order: 1;
+    }
+
+    /*********/
+    /* aside */
+    /*********/
+
+    /**********/
+    /* footer */
+    /**********/
+    section > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section > ul > li {
+        margin: 1em 0;
+    }
+
+    section > ul > li > a {
+        color: #FFF;
+        font-size: 1.2em;
+        line-height: 180%;
+    }
+}
