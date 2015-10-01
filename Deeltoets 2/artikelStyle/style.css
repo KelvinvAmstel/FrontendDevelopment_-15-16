@@ -102,7 +102,7 @@ body > section {
 
 body > aside {
     background-color: #B5EDFF;
-    min-width: 13em;
+    font-size: 80%;
     order: 1;
     padding: 1.5em 2% 1.5em 2%;
     text-align: left;
@@ -147,7 +147,7 @@ header > nav > ul > li {
 
 header > nav > ul > li > a {
     background-color: white;
-    border-radius: 50% / 50%;
+    border-radius: 50% ;
     color: black;
     margin: 1em 1em 0 0;
     padding: 1em;
@@ -302,7 +302,7 @@ footer > section > p {
 }
 
 footer > p > a {
-    color: #FFF;
+    color: darkblue;
 }
 
 body > footer > section > p > a {
@@ -316,7 +316,7 @@ section > ul {
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: left;
 }
 
@@ -339,9 +339,9 @@ section > ul > li > ul > li > a{
 
 
 /*********************************************/
-/* Media queries maximal width size is 480px */
+/* Media queries maximal width size is 800px */
 /*********************************************/
-@media (max-width: 1060px) {
+@media (max-width: 800px) {
 
     img {
         width: 100%;
@@ -498,12 +498,15 @@ section > ul > li > ul > li > a{
         flex-direction: column;
     }
 
-    footer > section > ul > li {
-    }
-
     footer > section > ul > li > a {
         color: #FFF;
         font-size: 1.2em;
         line-height: 180%;
+    }
+}
+
+@media (max-width: 600px) {
+    header > img {
+        width: 60%;
     }
 }
