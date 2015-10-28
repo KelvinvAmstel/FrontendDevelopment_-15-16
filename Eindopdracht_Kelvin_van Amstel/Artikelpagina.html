@@ -30,6 +30,14 @@
                 <button type="submit">Zoek!</button>
             </form>
             <p class="to-profile"><a href="#">Profielpagina Elena Harris</a></p>
+
+            <!-- Picture element -->
+            <picture>
+                <source media="(min-width: 1601px)" srcset="img/picture_fed_1600.png">
+                <source media="(min-width: 1281px)" srcset="img/picture_fed_1280.png">
+                <source media="(min-width: 801px)" srcset="img/picture_fed_800.png">
+                <img src="img/picture_fed_480.png" alt="Nice picture of CMD people">
+            </picture>
         </header>
 
         <!-- Main article -->
@@ -68,6 +76,13 @@
                     <h4>Uitstroomberoepen</h4>
                     <ol>
                         <li><a href="#">Frontend developer</a></li>
+                        <video controls>
+                            <source src="videos/CMDA_V2_Frontend_2.mp4" type="video/mp4">
+                            <source src="videos/CMDA_V2_Frontend_2.ogg" type="video/ogg">
+                            <source src="videos/CMDA_V2_Frontend_2.webm" type="video/webm">
+                            <img src="videos/CMDA_V2_Frontend_2.png" alt="foto van het filmpje">
+                            <p>Sorry je browser ondersteunt het filmpje niet. Download het filmpje <a href="videos/CMDA_V2_Frontend_2.mp4" download>hier! </a></p>
+                        </video>
                         <li><a href="#">Visual designer</a></li>
                         <li><a href="#">Interaction designer</a></li>
                         <li><a href="#">Content manager</a></li>
@@ -348,6 +363,8 @@
             <p id="feedback"><a href="#">Geef ons feedback</a></p>
 
         </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
 
     </body>
 </html>
