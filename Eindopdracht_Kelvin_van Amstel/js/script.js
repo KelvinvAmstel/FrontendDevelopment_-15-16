@@ -10,8 +10,8 @@ var fieldset1 = document.querySelector('#project');
 var fieldset2 = document.querySelector('#stage');
 var nav = document.querySelector('nav');
 var menu = document.querySelectorAll('h2');
-var secondWidth= window.matchMedia("(max-width: 800px)")
-var thirdWidth= window.matchMedia("(max-width: 600px)")
+var secondWidth= window.matchMedia("(max-width: 800px)");
+var thirdWidth= window.matchMedia("(max-width: 600px)");
 
 /////////////////
 //  Functions  //
