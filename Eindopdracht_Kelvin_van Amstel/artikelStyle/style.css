@@ -92,7 +92,7 @@ body > main {
     background-color: #F0C8BB;
     order: 1;
     padding: 1em 4em;
-    width: 80%;
+    width: 70%;
 }
 
 main > * {
@@ -109,11 +109,10 @@ body > section {
 
 body > aside {
     background-color: #B5EDFF;
-    font-size: 80%;
     order: 1;
     padding: 1.5em 2%;
     text-align: left;
-    width: 20%;
+    width: 30%;
 }
 
 body > footer {
@@ -180,15 +179,10 @@ header > form {
 }
 
 header > img {
-    height: 80%;
+    height: 70%;
     order: 1;
-    width: 80%;
-}
-
-header > picture {
-    order: 3;
-    padding: 0;
-    width: 100%;
+    margin: 0 5em;
+    width: 70%;
 }
 
 /********/
@@ -218,6 +212,7 @@ legend {
 }
 
 textarea {
+    margin-top: .5em;
     width: 67%;
 }
 
@@ -255,20 +250,35 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input:required {
-    background-color: red;
+    background-color: #FF9494;
+}
+
+input {
+    margin-top: .5em;
 }
 
 /********************/
 /* .related section */
 /********************/
+.related {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.related > h2 {
+    width: 100vw;
+}
+
 section.related > article {
-    padding: 1em 12em 1em 12em;
+    margin: 1em;
+    padding: 1em;
+    width: 35em;
 }
 
 section.related > article:nth-child(odd) {
     background-color: #F3FFA6;
-    margin: 0;
-    width: 100%;
 }
 
 section.related > article > section > ul {
@@ -276,7 +286,7 @@ section.related > article > section > ul {
     -moz-display: box;
     -ms-display: flexbox;
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: wrap row;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -396,8 +406,8 @@ article > section > picture > img, source {
     padding: 0;
 }
 
-video, p > img {
-    width: 60vw;
+video, picture > img {
+    width: 100%;
 }
 
 /*Toggle radio button fieldsets*/
@@ -483,6 +493,7 @@ video, p > img {
     /* Header */
     /**********/
     header > h1, p {
+        margin-top: .3em;
         order: 1;
     }
 
@@ -520,13 +531,13 @@ video, p > img {
     }
 
     header > form {
-        margin-top: 3em;
+        margin-top: 1em;
         order: 3;
     }
 
     header > img {
         order: 4;
-        width: 100%;
+        width: 60%;
     }
 
     /********/
@@ -642,6 +653,12 @@ video, p > img {
     header > nav > ul >li > a:hover {
         animation: none;
     }
+
+    input {
+        height: 2.5em;
+        margin-top: .5em;
+    }
+
     textarea {
         margin-top: 3em;
         width: 100%;
